@@ -1,0 +1,52 @@
+<html>
+    <head>
+
+        <style>
+            .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            border-radius: 3px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            }
+
+            .button1 {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #4CAF50;
+            }
+
+            .button1:hover {
+            background-color: #4CAF50;
+            color: white;
+            }
+        </style>
+    <script>
+        function download(text, name, type) {
+        var a = document.getElementById("a");
+        var file = new Blob([text], {type: type});
+        a.href = URL.createObjectURL(file);
+        a.download = name;
+    }
+    </script>
+    </head>
+    <body>
+    
+    <br>
+
+    <img src ="<%=returndata['newdata']%>" id="a" height="500" width="700"> 
+    
+    <!-- <img src = "/images/DUNC.jpg"> -->
+
+    <a href="<%=returndata['newdata']%>" id="a" class="button button1" download>Download Image</a>
+    
+     
+    </body>
+    
+</html>

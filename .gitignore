@@ -1,0 +1,5 @@
+node_modules/
+clean/
+noisy/
+.history/
+testing/
